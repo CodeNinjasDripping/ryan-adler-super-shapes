@@ -19,6 +19,7 @@ public class Shape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Score.score++;
 transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
 if (transform.localScale.x <= .05f)
 {

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    [Header("Game Over UI Object")]
+    public GameObject gameOverCanvas;
     [Header("Shape Objects")]
     public GameObject[] shapePrefabs;
     [Header("Default Spawn Delay Time")]
@@ -14,6 +16,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
          InvokeRepeating("Spawn", spawnDelay, spawnTime);
     }
 
@@ -26,6 +29,9 @@ public class GameController : MonoBehaviour
    public void GameOver()
    {
     CancelInvoke("Spawn");
+    gameOverCanvas.SetActive(true);
+    Time.timeScale = 0;
+
    }
     void Update()
     {
