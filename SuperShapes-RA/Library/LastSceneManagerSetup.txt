@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SuperShapes.unity
+- path: Assets/Scenes/SuperDuperShape-RA.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
